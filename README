@@ -13,7 +13,7 @@ Requerimientos
 Documentación de Desarrollo
 =================================
 
-
+Install-Package Newtonsoft.Json -Version 7.0.1
 
 Ejemplos de Uso
 =================================
