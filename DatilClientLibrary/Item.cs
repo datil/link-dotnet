@@ -54,11 +54,11 @@ namespace DatilClientLibrary
         public double Descuento { get; set; }
 
         /// <summary> Impuestos aplicado al ítem </summary>
-        private List<Impuesto> impuestos;
+        private List<ImpuestoItem> impuestos;
 
         /// <summary> Impuestos aplicado al ítem </summary>
-        /// <see cref="Impuesto"/>
-        public List<Impuesto> Impuestos {
+        /// <see cref="ImpuestoItem"/>
+        public List<ImpuestoItem> Impuestos {
             get {
                 return impuestos;
             }

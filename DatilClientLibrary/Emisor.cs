@@ -1,26 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace DatilClientLibrary
 {
     public class Emisor
     {
-        /*
-
-        Seller information:
-
-        ruc                 	string	                Número de RUC de 13 caracteres
-        razon_social	        string	                Razón social. Máximo 300 caracteres
-        nombre_comercial	    string	                Nombre comercial. Máximo 300 caracteres
-        direccion	            string	                Dirección registrada en el SRI. Máximo 300 caracteres.
-        contribuyente_especial	string	                Número de resolución. En blanco si no es contribuyente especial.
-        obligado_contabilidad	boolean	                true si está obligado a llevar contabilidad.
-        establecimiento	        establecimiento         Establecimiento que emite la factura.
-
-        */
 
         /// <summary>Número de RUC de 13 caracteres</summary>
         private string ruc;
@@ -68,10 +51,12 @@ namespace DatilClientLibrary
         private string direccion;
 
         /// <summary>Dirección registrada en el SRI.Máximo 300 caracteres</summary>
+        [DefaultValue("")]
         public string Direccion {
             get { return direccion; }
             set {
                 Validator.MaxLength(value, 300);
+                direccion = value;
             }
         }
 
