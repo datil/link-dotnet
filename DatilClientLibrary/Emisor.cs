@@ -2,6 +2,9 @@
 
 namespace DatilClientLibrary
 {
+    /// <summary>
+    /// Clase del emisor de un comprobante.
+    /// </summary>
     public class Emisor
     {
 

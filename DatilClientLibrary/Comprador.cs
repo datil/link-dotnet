@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
+    /// <summary>
+    /// Clase del comprador de un producto o servicio.
+    /// </summary>
     public class Comprador
     {
 

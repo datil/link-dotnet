@@ -14,15 +14,39 @@ namespace DatilClientLibrary
 {
 
 
-
-
+    /// <summary>
+    /// Clase de la factura
+    /// </summary>
     public class Factura
     {
-        
+
+        /// <summary>
+        /// Emisor (persona natural o jurídica) del producto o servicio que consta en la factura.
+        /// </summary>
+        /// <see cref="Emisor"/>
         public Emisor Emisor { get; set; }
+
+        /// <summary>
+        /// Comprador del producto o servicio que consta en la factura.
+        /// </summary>
+        /// <see cref="Comprador"/>
         public Comprador Comprador { get; set; }
+
+        /// <summary>
+        /// Lista de items detallados en la factura.
+        /// </summary>
+        /// <see cref="Item"/>
         public List<Item> Items { get; set; }
+
+        /// <summary>
+        /// Totales de la factura.
+        /// </summary>
+        /// <see cref="Total"/>
         public Total Totales { get; set; }
+
+        /// <summary>
+        /// Información adicional de la factura.
+        /// </summary>
         public Dictionary<string,string> InformacionAdicional { get; set; }
 
         /// <summary>Número de secuencia de la factura.</summary>
@@ -50,6 +74,9 @@ namespace DatilClientLibrary
         ///<summary>La clave de acceso representa un identificador único del comprobante.Si esta información no es provista, Dátil la generará.</summary>
         public string ClaveAcceso { get; set; }
 
+        /// <summary>
+        /// Construir una nueva Factura.
+        /// </summary>
         public Factura()
         {
             GuiaRemision = null;
@@ -69,6 +96,11 @@ namespace DatilClientLibrary
         }
         */
         
+        /// <summary>
+        /// Enviar información de la factura para generarla electrónicamente.
+        /// </summary>
+        /// <param name="requestOptions"></param>
+        /// <returns>Respuesta del requerimiento</returns>
         public String Enviar(RequestOptions requestOptions)
         {
 

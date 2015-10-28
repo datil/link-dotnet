@@ -1,5 +1,9 @@
 ﻿namespace DatilClientLibrary
 {
+    /// <summary>
+    /// Clase para crear un nuevo Establecimiento. Los establecimientos le pertenecen aun Emisor.
+    /// </summary>
+    /// <see cref="Emisor"/>
     public class Establecimiento
     {
 

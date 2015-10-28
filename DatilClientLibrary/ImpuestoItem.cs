@@ -2,12 +2,16 @@
 
 namespace DatilClientLibrary
 {
+    /// <summary>
+    /// Clase del impuesto del item.
+    /// </summary>
+    ///  <see cref="Item"/>
     public class ImpuestoItem : Impuesto
     {
 
 
       
-        /// <summary> actual del impuesto expresado por un número entre 0.0 y 100.0</summary>
+        /// <summary> Porcentaje actual del impuesto expresado por un número entre 0.0 y 100.0</summary>
         public double Tarifa { get; set; }
 
 

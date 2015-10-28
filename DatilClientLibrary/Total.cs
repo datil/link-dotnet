@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
+    /// <summary>
+    /// Clase de los totales de una Factura.
+    /// </summary>
+    ///<see cref="Factura"/>
     public class Total
     {
         /// <summary>Total de la factura antes de aplicar impuestos.</summary>

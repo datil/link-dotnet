@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
+    /// <summary>
+    /// Clase del Item que le pertenece a un comprobante.
+    /// </summary>
+    /// <see cref="Factura"/>
     public class Item
     {
 
