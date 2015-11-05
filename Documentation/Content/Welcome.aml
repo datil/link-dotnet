@@ -8,8 +8,25 @@
 		<section>
 			<title>Cómo empezar</title>
 			<content>
-				<para>Para empezar a usar DatilClientLibrary agregue el archivo .dll a su proyecto y cree objetos con información de su Factura para luego enviarla y
-        consultar su estado.</para>
+				<para>
+          Para empezar a usar DatilClientLibrary agregue el archivo .dll a su proyecto y cree objetos con información de su Factura para luego enviarla y
+          consultar su estado.
+
+          Previamente instale las siguientes dependencias:\
+
+          <list class="bullet">
+            <listItem>
+              <para>Newtonsoft.Json 7.0.1</para>
+            </listItem>
+            <listItem>
+              <para> Json.NET.ContractResolverExtentions</para>
+            </listItem>
+            <listItem>
+              <para>RestSharp</para>
+            </listItem>
+          </list>
+        
+        </para>
 
 				
 			</content>

@@ -9,6 +9,8 @@ Requerimientos
 
 * [.NET Framework 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653)
 
+* Newtonsoft.Json 7.0.1
+`Install-Package Newtonsoft.Json -Version 7.0.1`
 
 Ejemplos de Uso
 =================================
