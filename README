@@ -10,12 +10,9 @@ Requerimientos
 * [.NET Framework 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653)
 
 
-Documentación de Desarrollo
-=================================
-
-Install-Package Newtonsoft.Json -Version 7.0.1
-
 Ejemplos de Uso
 =================================
+
+Ver [Ejemplo C Sharp](https://github.com/datil/link-dotnet/blob/master/EjemploCSharp/Program.cs)
 
 

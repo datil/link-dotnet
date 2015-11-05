@@ -2,17 +2,20 @@
 <topic id="d727a86a-f927-4630-97f5-aa4ba887f27d" revisionNumber="1">
 	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<introduction>
-			<para>Version [TODO: Version] was released on [TODO: Date].
+			<para>Versión 1.0.0-alpha  Nov-05-2015.
 			</para>
 		</introduction>
 
 		<section>
-			<title>Changes in This Release</title>
+			<title>Cambios en esta versión</title>
 			<content>
 
 				<list class="bullet">
 					<listItem>
-						<para>[TODO: Add change items here]</para>
+						<para>Enviar nueva Factura</para>
+    			</listItem>
+          <listItem>
+            <para>Consultar estado de la factura enviada</para>
 					</listItem>
 
 				</list>

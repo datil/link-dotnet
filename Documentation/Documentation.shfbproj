@@ -16,7 +16,7 @@
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>Documentation</HtmlHelpName>
-    <Language>en-US</Language>
+    <Language>es-ES</Language>
     <TransformComponentArguments>
       <Argument Key="logoFile" Value="Help.png" xmlns="" />
       <Argument Key="logoHeight" Value="" xmlns="" />
@@ -30,7 +30,7 @@
       <DocumentationSource sourceFile="..\DatilClientLibrary\DatilClientLibrary.csproj" xmlns="" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>HtmlHelp1, Markdown, Website</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -40,12 +40,12 @@
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
-    <RootNamespaceTitle>Librer&amp;#237%3ba .NET para conectarse a la API de D&amp;#225%3btil</RootNamespaceTitle>
-    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <RootNamespaceTitle>DatilClientLibrary</RootNamespaceTitle>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>Documentaci&amp;#243%3bn del</HelpTitle>
+    <HelpTitle>Documentaci&amp;#243%3bn de DatilClientLibrary</HelpTitle>
     <FeedbackEMailLinkText>gustavo%40datilmedia.com</FeedbackEMailLinkText>
     <FeedbackEMailAddress>gustavo%40datilmedia.com</FeedbackEMailAddress>
     <ContentPlacement>AboveNamespaces</ContentPlacement>

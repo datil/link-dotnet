@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Bienvenido a DatilClientLibrary" Url="html/d8c8ee82-39bb-4cf1-9a2f-270800f04369.htm" />
+  <HelpTOCNode Id="a850b38e-f3f2-44c7-bbee-0fa0cc9b4848" Title="Historial de versiones" Url="html/c5a34b6d-ec6f-4fef-8356-826c11cafd67.htm">
+    <HelpTOCNode Title="Versi&#243;n 1.0.0" Url="html/d727a86a-f927-4630-97f5-aa4ba887f27d.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="c9ac100c-f08c-4227-ba67-b92b7d771575" Title="DatilClientLibrary" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="99588a93-766d-4339-a274-930bcb73d2ec" Title="DatilClientLibrary" Url="html/5781b0e1-2a1e-e9c0-a523-8b6b6b20941a.htm">
+      <HelpTOCNode Id="4ded09d4-1e2b-4633-999e-b6456e024794" Title="Comprador (Clase)" Url="html/f346f0c7-910a-aaad-becf-3303381b4db7.htm">
+        <HelpTOCNode Title="Comprador (Constructor )" Url="html/d8ce4a60-3490-44fc-a3a1-407ac6c4157d.htm" />
+        <HelpTOCNode Id="bdad2574-6c44-432b-9bd2-419de3d6d9cf" Title="Comprador (Propiedades)" Url="html/bafd0365-3f8e-a3f4-88d8-017ffff31198.htm">
+          <HelpTOCNode Title="Direccion (Propiedad )" Url="html/85babca0-ceb7-960e-cbd9-a70e17e0ae6e.htm" />
+          <HelpTOCNode Title="Email (Propiedad )" Url="html/dbc07892-0b13-7fc4-2d8b-86bcb43dd089.htm" />
+          <HelpTOCNode Title="Identificacion (Propiedad )" Url="html/6e068757-42aa-98f9-1307-58b4aeb8de28.htm" />
+          <HelpTOCNode Title="RazonSocial (Propiedad )" Url="html/aa42a61e-2b23-a595-cfcb-a5d2bd16f73d.htm" />
+          <HelpTOCNode Title="Telefono (Propiedad )" Url="html/01c6dc21-6237-e8be-1a82-4aba5b423f03.htm" />
+          <HelpTOCNode Title="TipoIdentificacion (Propiedad )" Url="html/d9618792-4581-3bb5-a3b8-4638e1994297.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Comprador (M&#233;todos)" Url="html/3e58b40d-2aff-931c-e99d-71d37486b7d6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="eb65cf35-5ae9-4799-850a-38a969ef7149" Title="Emisor (Clase)" Url="html/5904885d-ae55-0bef-63fa-265c3f166ef3.htm">
+        <HelpTOCNode Title="Emisor (Constructor )" Url="html/089f1313-c332-b855-304f-4c6452c9d64b.htm" />
+        <HelpTOCNode Id="1907c73d-052e-4c9e-b2af-0610e546fc2b" Title="Emisor (Propiedades)" Url="html/5b012231-a4d8-cd01-29a9-4db23bc9734a.htm">
+          <HelpTOCNode Title="ContribuyenteEspecial (Propiedad )" Url="html/df44a1b1-95f6-419c-0afa-5f66c01f8da9.htm" />
+          <HelpTOCNode Title="Direccion (Propiedad )" Url="html/37234de7-1b7c-2761-b548-4fa6c90555ea.htm" />
+          <HelpTOCNode Title="Establecimiento (Propiedad )" Url="html/ef707b72-3d49-95ea-9c3d-936d2e669e35.htm" />
+          <HelpTOCNode Title="NombreComercial (Propiedad )" Url="html/aa67cd4d-2020-b59f-8034-f9ba7387c91b.htm" />
+          <HelpTOCNode Title="ObligadoContabilidad (Propiedad )" Url="html/bbf7ab4b-c297-3c3c-30c9-2f9d3563b140.htm" />
+          <HelpTOCNode Title="RazonSocial (Propiedad )" Url="html/471a1928-5cbf-526c-bba4-c3f315097607.htm" />
+          <HelpTOCNode Title="Ruc (Propiedad )" Url="html/578d7ba0-0511-45fd-9557-58a2cffb0501.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Emisor (M&#233;todos)" Url="html/ed11ab0e-1432-7371-555c-54b1e56c7209.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="17ed3a0a-2d30-4597-9f49-95ce58bacb3f" Title="Establecimiento (Clase)" Url="html/f765ec21-70ad-c724-9b06-8802817378b4.htm">
+        <HelpTOCNode Title="Establecimiento (Constructor )" Url="html/5e4187b9-ec2a-ab29-359e-9b48b64fadaf.htm" />
+        <HelpTOCNode Id="600b7ccd-df2a-4c53-97c0-79c32544366a" Title="Establecimiento (Propiedades)" Url="html/6162cc4c-98a0-f26f-d2eb-3c0cc72d373c.htm">
+          <HelpTOCNode Title="Codigo (Propiedad )" Url="html/5e27383a-bc14-a0dd-3c25-8570507e440b.htm" />
+          <HelpTOCNode Title="PuntoEmision (Propiedad )" Url="html/fac45475-c081-b9a8-c4b5-3a807c730d4d.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Establecimiento (M&#233;todos)" Url="html/b08dbe3f-f8b8-902d-a204-b0c8875ed838.htm" />
+        <HelpTOCNode Id="8a0a0f6f-8552-4245-bc69-267f579c8636" Title="Establecimiento (Campos)" Url="html/60fd74fe-5d6f-471c-181a-031fe047088e.htm">
+          <HelpTOCNode Title="Direccion (Campo)" Url="html/6199875f-5d37-fdf0-c970-867262b980fd.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4f54a040-26ad-4754-a623-7d6cf5701b1b" Title="Factura (Clase)" Url="html/9f715e57-2e21-6d9e-8351-0ab480453123.htm">
+        <HelpTOCNode Title="Factura (Constructor )" Url="html/4a293f11-91a8-5749-b222-13d27811837c.htm" />
+        <HelpTOCNode Id="de40a41a-cbd8-453a-8a71-ba407b0b3980" Title="Factura (Propiedades)" Url="html/ae74fcf0-ebd8-96c6-5628-082f602177dc.htm">
+          <HelpTOCNode Title="Ambiente (Propiedad )" Url="html/bd068708-f0c5-66c3-e130-1f014d86d90c.htm" />
+          <HelpTOCNode Title="ClaveAcceso (Propiedad )" Url="html/81b99d53-1548-7767-7d30-9534a4f769cb.htm" />
+          <HelpTOCNode Title="Comprador (Propiedad )" Url="html/8b665bbf-ac15-2524-f91d-36ec3ba92dbb.htm" />
+          <HelpTOCNode Title="Emisor (Propiedad )" Url="html/5eeaec3b-14da-4c02-c5d7-0ee0dce6c163.htm" />
+          <HelpTOCNode Title="FechaEmision (Propiedad )" Url="html/f832740e-ee6b-7aba-a022-49949b7628d5.htm" />
+          <HelpTOCNode Title="GuiaRemision (Propiedad )" Url="html/fde53bcb-3d95-e2f3-baef-a49b37f22e30.htm" />
+          <HelpTOCNode Title="InformacionAdicional (Propiedad )" Url="html/c7403ef2-30df-cf37-dd91-dacbc005bb61.htm" />
+          <HelpTOCNode Title="Items (Propiedad )" Url="html/a334bb08-0d2f-c0ad-dc04-28bd8a54dda3.htm" />
+          <HelpTOCNode Title="Moneda (Propiedad )" Url="html/84595ea6-b518-7e4a-b302-50e272899099.htm" />
+          <HelpTOCNode Title="Secuencial (Propiedad )" Url="html/72e558e6-c622-25bd-ebad-f0e0eb9968d6.htm" />
+          <HelpTOCNode Title="TipoEmision (Propiedad )" Url="html/ae3fe410-9117-d4c8-e90e-5928a53f1f35.htm" />
+          <HelpTOCNode Title="Totales (Propiedad )" Url="html/0281f5a2-a91b-c17c-dc77-f2ec19b8ea83.htm" />
+          <HelpTOCNode Title="Version (Propiedad )" Url="html/b10159ec-8995-487d-5458-a1a3c78a294f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="40f0b2bb-eb62-4ed7-99fa-96106bdea3a6" Title="Factura (M&#233;todos)" Url="html/6836b8fb-5a26-d223-e991-e2a3376bb0e1.htm">
+          <HelpTOCNode Title="Consultar (M&#233;todo )" Url="html/d1e00410-9c05-eea4-cbdb-93ad8b6be29e.htm" />
+          <HelpTOCNode Title="Enviar (M&#233;todo )" Url="html/b30419b7-d2f7-8649-4f84-3985d16f04a2.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="860acf17-f9f9-48fc-b9c6-f9f10a34b3f3" Title="Impuesto (Clase)" Url="html/e368c0a9-0957-925b-ee24-1f3fee531b0e.htm">
+        <HelpTOCNode Title="Impuesto (Constructor )" Url="html/596a36d8-ee22-deed-1c4e-5eae35c329b6.htm" />
+        <HelpTOCNode Id="726c7edc-245b-44c9-8f73-2bb7b917bf82" Title="Impuesto (Propiedades)" Url="html/bcacac24-2269-fdaa-b8f6-e6b7abbe6d5c.htm">
+          <HelpTOCNode Title="BaseImponible (Propiedad )" Url="html/ff32093c-6d33-e5e6-31fe-2c63b01f420b.htm" />
+          <HelpTOCNode Title="Codigo (Propiedad )" Url="html/7cf1d838-b289-99b2-beee-9b79d3b49476.htm" />
+          <HelpTOCNode Title="CodigoPorcentaje (Propiedad )" Url="html/f8e2ddda-0b55-9e68-da98-2e78e5a2f805.htm" />
+          <HelpTOCNode Title="Valor (Propiedad )" Url="html/25083277-8d83-1797-6e11-66e3cbada083.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Impuesto (M&#233;todos)" Url="html/bcf2a698-036e-9d89-327c-bfac329827f9.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9e45d4b7-9c24-4357-bf86-fa65c42372e3" Title="ImpuestoItem (Clase)" Url="html/d4973c29-45d9-1fc0-e538-1e1220b8778f.htm">
+        <HelpTOCNode Title="ImpuestoItem (Constructor )" Url="html/9c4ebdd5-5255-b6b1-9fa0-8ac0b1bad3b7.htm" />
+        <HelpTOCNode Id="97261703-4bbd-4673-94d9-e230adb04c96" Title="ImpuestoItem (Propiedades)" Url="html/f09fd9ef-e1b0-ab34-bc8a-d6248f79b56a.htm">
+          <HelpTOCNode Title="Tarifa (Propiedad )" Url="html/481767d7-60ee-ab6a-58ff-2cec53019f74.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ImpuestoItem (M&#233;todos)" Url="html/2c78bb53-c0f4-d530-c4b2-a11b09e99b39.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="02c9ceea-9488-42e9-9ac3-a3ac40a2c388" Title="Item (Clase)" Url="html/a92766e9-3e19-f8f3-8520-16a00b34048f.htm">
+        <HelpTOCNode Title="Item (Constructor )" Url="html/7728f979-2480-9866-86de-d71bc763a928.htm" />
+        <HelpTOCNode Id="3ae33af0-95c4-4379-9882-2fdd796b3731" Title="Item (Propiedades)" Url="html/88f269f6-95e4-38ba-a800-5b7326874c00.htm">
+          <HelpTOCNode Title="Cantidad (Propiedad )" Url="html/14b0e09f-7f72-b994-674d-a3853332de9b.htm" />
+          <HelpTOCNode Title="CodigoAuxiliar (Propiedad )" Url="html/bbd9a9b3-5818-0497-4af3-ee91943e3496.htm" />
+          <HelpTOCNode Title="CodigoPrincipal (Propiedad )" Url="html/a98f5944-a42e-592a-ec40-7ca300b3f4c9.htm" />
+          <HelpTOCNode Title="Descripcion (Propiedad )" Url="html/c67ddc70-86f7-124c-e38e-76f634f1bff0.htm" />
+          <HelpTOCNode Title="Descuento (Propiedad )" Url="html/01e7765e-2e33-03f9-59bc-339be80e8347.htm" />
+          <HelpTOCNode Title="DetallesAdicionales (Propiedad )" Url="html/0899f985-a0b1-08bd-2b7d-91b9f1684df1.htm" />
+          <HelpTOCNode Title="Impuestos (Propiedad )" Url="html/62833467-2e71-4cca-c4c6-d59b7102b462.htm" />
+          <HelpTOCNode Title="PrecioTotalSinImpuestos (Propiedad )" Url="html/dfe053ca-98c2-3c93-ce71-8747404a3589.htm" />
+          <HelpTOCNode Title="PrecioUnitario (Propiedad )" Url="html/40802553-cd34-653f-42dc-e9dcc4800d0a.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Item (M&#233;todos)" Url="html/f0ba9462-e1a3-3d82-09b7-4c024c5d7a81.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0a0d4a7e-9325-4a58-97ac-7033cdd5b336" Title="NoValidAttributeException (Clase)" Url="html/8036bd3b-52ad-9977-5e2f-3e6333a7dc24.htm">
+        <HelpTOCNode Id="21742cb0-34ab-4c37-b931-50aca957997a" Title="NoValidAttributeException (Constructor )" Url="html/3ec4d225-0338-b0cc-d0f5-7ae46d04dba4.htm">
+          <HelpTOCNode Title="NoValidAttributeException (Constructor )" Url="html/0a564c4e-2638-c494-d60b-df11cc4eae0b.htm" />
+          <HelpTOCNode Title="NoValidAttributeException (Constructor (String))" Url="html/cf0d7134-ab6a-6fd6-b7ff-f845a8ad6b9d.htm" />
+          <HelpTOCNode Title="NoValidAttributeException (Constructor (String, Exception))" Url="html/76ae85d1-1155-c8a2-6047-fa151b073553.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="NoValidAttributeException (Propiedades)" Url="html/fa8af75a-60b0-e119-dad6-6b858ea35bc9.htm" />
+        <HelpTOCNode Title="NoValidAttributeException (M&#233;todos)" Url="html/56c2d500-9d0c-7757-5edc-0586625b59b7.htm" />
+        <HelpTOCNode Title="NoValidAttributeException (Eventos)" Url="html/32add8ed-a309-bbff-2a22-1cfdfb281e23.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="95eea574-cef1-4e6d-916a-db1e0cab7858" Title="RequestOptions (Clase)" Url="html/0f86fc13-ddde-0783-d427-196668772f71.htm">
+        <HelpTOCNode Title="RequestOptions (Constructor )" Url="html/cf0b09da-f175-0c98-4777-51c260662198.htm" />
+        <HelpTOCNode Id="d0815067-3ff9-4692-aee3-8267a275e636" Title="RequestOptions (Propiedades)" Url="html/374f7229-34fb-d4d9-5184-afe53b3d522f.htm">
+          <HelpTOCNode Title="ApiKey (Propiedad )" Url="html/94dab922-3567-88f4-f6d6-cd29af1192c6.htm" />
+          <HelpTOCNode Title="Password (Propiedad )" Url="html/407f82bb-2983-6da2-2c31-8a7e7e6df7d4.htm" />
+          <HelpTOCNode Title="Url (Propiedad )" Url="html/e7c04396-921d-4e26-41dd-a99a2e2ec04c.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="RequestOptions (M&#233;todos)" Url="html/e5d54270-1160-a120-14ed-379ef4fb5a8e.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9962672d-2580-40a3-8f84-663b5f61c2dc" Title="Total (Clase)" Url="html/b3291db1-5e98-2ab4-5644-cce5f5909252.htm">
+        <HelpTOCNode Title="Total (Constructor )" Url="html/3d534c1c-9953-980a-6e6a-8f73849c21d6.htm" />
+        <HelpTOCNode Id="707c5929-2dde-4cb0-b6d6-0841a5765091" Title="Total (Propiedades)" Url="html/a679d042-dddc-265d-bc82-9fc84cb2d50a.htm">
+          <HelpTOCNode Title="Descuento (Propiedad )" Url="html/7851faf0-c2eb-6105-173c-ecafe6fb27a0.htm" />
+          <HelpTOCNode Title="ImporteTotal (Propiedad )" Url="html/54255dd4-cde5-cb17-4eee-52012dc9edd1.htm" />
+          <HelpTOCNode Title="Impuestos (Propiedad )" Url="html/5bc2c176-7284-5204-8471-3ef44b46315e.htm" />
+          <HelpTOCNode Title="Propina (Propiedad )" Url="html/96fd2a88-5b90-28bf-8b9f-5c561a5fc655.htm" />
+          <HelpTOCNode Title="TotalSinImpuestos (Propiedad )" Url="html/8822f83d-e6f5-d370-551b-76c640b97b0d.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Total (M&#233;todos)" Url="html/6a6809b3-e9c8-0219-41f0-b01401202bc4.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="26701f61-4c55-400d-ac35-43ed889f9cbb" Title="Validator (Clase)" Url="html/1208da23-3e54-8f94-3672-ea0f73153fc0.htm">
+        <HelpTOCNode Title="Validator (Constructor )" Url="html/f89472dc-95a2-fcb0-18e0-9c199ea539ff.htm" />
+        <HelpTOCNode Id="6bc9a756-1644-4e6b-90f9-5be640b39bbf" Title="Validator (M&#233;todos)" Url="html/d6b44486-b97e-cfcb-d956-9ccb9aa6901b.htm">
+          <HelpTOCNode Title="MaxLength (M&#233;todo )" Url="html/fc97eb43-7abc-15b0-3df8-43bf07071487.htm" />
+          <HelpTOCNode Title="SameLength (M&#233;todo )" Url="html/4a5fce46-f135-954d-f267-a92f443dbb6c.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

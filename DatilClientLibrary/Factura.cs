@@ -9,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+/// <summary>
+/// Clases para crear comprobantes
+/// </summary>
 namespace DatilClientLibrary
 {
 
@@ -88,19 +90,24 @@ namespace DatilClientLibrary
 
         }
         
-        /*public String GetInfo(RequestOptions requestOptions)
+        /// <summary>
+        /// Consultar información de la factura previamente enviada.
+        /// </summary>
+        /// <param name="requestOptions"></param>
+        /// <returns>Información de la factura enviada</returns>
+        public static string Consultar(RequestOptions requestOptions)
         {
             var apiRequest = new ApiRequest(requestOptions);
             return apiRequest.SendRequest();
            
         }
-        */
+        
         
         /// <summary>
         /// Enviar información de la factura para generarla electrónicamente.
         /// </summary>
         /// <param name="requestOptions"></param>
-        /// <returns>Respuesta del requerimiento</returns>
+        /// <returns>Información de la factura enviada</returns>
         public String Enviar(RequestOptions requestOptions)
         {
 
