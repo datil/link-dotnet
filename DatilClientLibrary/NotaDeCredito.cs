@@ -14,52 +14,64 @@ namespace DatilClientLibrary
 
 
     /// <summary>
-    /// Clase de la factura
+    /// Clase de la nota de crédito
     /// </summary>
-    public class Factura
+    public class NotaDeCredito
     {
 
         /// <summary>
-        /// Emisor (persona natural o jurídica) del producto o servicio que consta en la factura.
+        /// Emisor (persona natural o jurídica) del producto o servicio que consta en la nota de crédito.
         /// </summary>
         /// <see cref="Emisor"/>
         public Emisor Emisor { get; set; }
 
         /// <summary>
-        /// Comprador del producto o servicio que consta en la factura.
+        /// Comprador del producto o servicio que consta en la nota de crédito.
         /// </summary>
         /// <see cref="Comprador"/>
         public Comprador Comprador { get; set; }
 
         /// <summary>
-        /// Lista de items detallados en la factura.
+        /// Lista de items detallados en la nota de crédito.
         /// </summary>
         /// <see cref="Item"/>
         public List<Item> Items { get; set; }
 
         /// <summary>
-        /// Totales de la factura.
+        /// Totales de la nota de crédito.
         /// </summary>
-        /// <see cref="TotalesFactura"/>
-        public TotalesFactura Totales { get; set; }
+        /// <see cref="TotalesNotaDeCredito"/>
+        public TotalesNotaDeCredito Totales { get; set; }
 
         /// <summary>
-        /// Información adicional de la factura.
+        /// Información adicional de la nota de crédito.
         /// </summary>
-        public Dictionary<string,string> InformacionAdicional { get; set; }
+        public Dictionary<string, string> InformacionAdicional { get; set; }
 
-        /// <summary>Número de secuencia de la factura.</summary>
+        /// <summary>Número de secuencia de la nota de crédito.</summary>
         public string Secuencial { get; set; }
 
         /// <summary>Código ISO de la moneda.</summary>
         public string Moneda { get; set; }
 
-        ///<summary>Fecha de emisión de la factura.</summary>
+        ///<summary>Fecha de emisión de la nota de crédito.</summary>
         public DateTimeOffset FechaEmision { get; set; }
         // ToString("yyyy-MM-dd HH':'mm':'ss")
 
-        ///<summary>Número de guía de remisión asociada a esta factura en formato 001-002-000000003 ([0-9]{3}-[0-9]{3}-[0-9]{9})</summary>
-        public string GuiaRemision { get; set; }
+        ///<summary>Fecha de emisión del documento modificado.</summary>
+        public DateTimeOffset FechaEmisionDocumentoModificado { get; set; }
+        // ToString("yyyy-MM-dd HH':'mm':'ss")
+
+        ///<summary>Número del documento modificado.</summary>
+        public string NumeroDocumentoModificado { get; set; }
+
+        ///<summary>Tipo del documento modificado.
+        ///     http://datil.github.io/link-docs/#tipos-de-documentos
+        ///</summary>
+        public string TipoDocumentoModificado { get; set; }
+
+        ///<summary>Motivo del documento modificado.</summary>
+        public string Motivo { get; set; }
 
         ///<summary>Pruebas: 1.Producción 2..</summary>
         public int Ambiente { get; set; }
@@ -73,42 +85,42 @@ namespace DatilClientLibrary
         ///<summary>La clave de acceso representa un identificador único del comprobante.Si esta información no es provista, Dátil la generará.</summary>
         public string ClaveAcceso { get; set; }
 
+
+
         /// <summary>
-        /// Construir una nueva Factura.
+        /// Construir una nueva nota de crédito.
         /// </summary>
-        public Factura()
+        public NotaDeCredito()
         {
-            GuiaRemision = null;
             Version = "1.0.0";
             TipoEmision = 1;
             Ambiente = 1;
             Moneda = "USD";
-            ClaveAcceso = null; 
-
+            ClaveAcceso = null;
         }
-        
+
         /// <summary>
-        /// Consultar información de la factura previamente enviada.
+        /// Consultar información de la nota de crédito previamente enviada.
         /// </summary>
         /// <param name="requestOptions"></param>
-        /// <returns>Información de la factura enviada</returns>
+        /// <returns>Información de la nota de crédito enviada</returns>
         public static string Consultar(RequestOptions requestOptions)
         {
-            Console.WriteLine("Consultando Factura");
+            Console.WriteLine("Consultando nota de crédito");
             var apiRequest = new ApiRequest(requestOptions);
             return apiRequest.Get();
-           
+
         }
-        
-        
+
+
         /// <summary>
-        /// Enviar información de la factura para generarla electrónicamente.
+        /// Enviar información de la nota de crédito para generarla electrónicamente.
         /// </summary>
         /// <param name="requestOptions"></param>
-        /// <returns>Información de la factura enviada</returns>
+        /// <returns>Información de la nota de crédito enviada</returns>
         public String Enviar(RequestOptions requestOptions)
         {
-            Console.WriteLine("Enviando factura");
+            Console.WriteLine("Enviando nota de crédito");
             var jsonSettings = new JsonSerializerSettings
             {
                 ContractResolver = new SnakeCasePropertyNamesContractResolver(),
@@ -120,7 +132,7 @@ namespace DatilClientLibrary
             return apiRequest.Post(json);
         }
 
-        
+
 
     }
 }

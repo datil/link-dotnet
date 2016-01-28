@@ -5,42 +5,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
+
 namespace DatilClientLibrary
 {
     class ApiRequest
     {
+       // private static readonly ILog log = LogManager.GetLogger("DatilClientLibrary");
+
         public RequestOptions requestOptions;
+        private RestClient client;
+        private RestRequest request;
 
         public ApiRequest(RequestOptions options) {
+           // BasicConfigurator.Configure();
             requestOptions = options;
-        }
-
-        public String SendRequest(String body = null)
-        {
-
-            var client = new RestClient(requestOptions.Url);
-            var request = new RestRequest();
+            client = new RestClient(requestOptions.Url);
+            request = new RestRequest();
+            request.AddHeader("Content-Type", "application/json");
             request.AddHeader("X-Key", requestOptions.ApiKey);
             request.AddHeader("X-Password", requestOptions.Password);
-            request.AddHeader("Content-Type", "application/json");
             request.RequestFormat = DataFormat.Json;
+        }
+
+        public String Get()
+        {
+            Console.WriteLine(" Making GET request to Datil: " + requestOptions.Url);
+            //Console.WriteLine(" Making GET request to Datil: " + requestOptions.Url);
+            request.Method = Method.GET;
+            IRestResponse response = client.Execute(request);
+            var content = response.Content;
+            Console.WriteLine("Datil Response: " + content);
+//            Console.ReadLine();
+            return content;
+        }
+
+        public String Post(String body)
+        {
+            Console.WriteLine("Datil Request Body:" + body);
             if (body == null)
             {
-                request.Method = Method.GET;
+                Console.WriteLine("Body is null");
             }
             else
             {
+                Console.WriteLine("Making POST request to Datil: " + requestOptions.Url);
                 request.Method = Method.POST;
                 request.AddParameter("application/json", body, ParameterType.RequestBody);
-                //var jsonobj  = JsonConvert.DeserializeObject(json);
-                //Console.WriteLine(JsonConvert.SerializeObject(jsonobj));
-                //request.AddBody(jsonobj);
             }
-
             IRestResponse response = client.Execute(request);
             var content = response.Content;
-            Console.WriteLine(content);
-            Console.ReadLine();
+            Console.WriteLine("Datil Response: " + content);
+            // Console.ReadLine();
             return content;
         }
 

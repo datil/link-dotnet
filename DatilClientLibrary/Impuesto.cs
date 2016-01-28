@@ -6,7 +6,7 @@ namespace DatilClientLibrary
     /// Clase para crear un nuevo Impuesto. Los impuestos pueden aplicarse a los Items o a los Totales.
     /// </summary>
     /// <see cref="Item"/>
-    /// <see cref="Total"/>
+    /// <see cref="TotalesFactura"/>
     public class Impuesto
     {
 

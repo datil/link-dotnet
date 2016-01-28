@@ -26,5 +26,16 @@ namespace DatilClientLibrary
         /// Url para consumir el servicio de Dátil. Varía de acuerdo al tipo de comprobante a procesar.
         /// </summary>
         public String Url { get; set; }
+
+        /// <summary> Construir opciones de requerimiento.</summary>
+        public RequestOptions() { }
+
+        /// <summary> Construir opciones de requerimiento.</summary>
+        public RequestOptions(String ApiKey, String Password, String Url) : this()
+        {
+            this.ApiKey = ApiKey;
+            this.Password = Password;
+            this.Url = Url;
+        }
     }
 }
