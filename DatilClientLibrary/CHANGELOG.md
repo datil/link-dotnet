@@ -1,5 +1,10 @@
 ﻿# Librería Link .Net  
 
+## 1.1.1-alpha - Febrero 2, 2016
+ 
+ * Corrección: Quitar descuento de totales de nota de crédito
+ 
+
 ## 1.1.0-alpha - Enero 28, 2016
 
  * Soporte para enviar y consultar notas de crédito

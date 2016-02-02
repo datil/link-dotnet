@@ -14,7 +14,7 @@ namespace EjemploCSharp
         {
 
             string datilApiNotaCreditoUrl = "https://link.datil.co/credit-notes/";
-            
+
             // Credenciales del requerimiento
             string myApiKey = "xxxx";
             string myPassword = "xxxx";
@@ -46,7 +46,7 @@ namespace EjemploCSharp
             items.Add(item); //agregar más items a la lista de ser necesario
 
             // Total de la nota de crédito con sus impuestos, no necesita propina.          
-            var totales = new TotalesNotaDeCredito(4359.54, 4882.68, 0.0);
+            var totales = new TotalesNotaDeCredito(4359.54, 4882.68);
             var impuestosDeTotal = new List<Impuesto>();
             impuestosDeTotal.Add(new Impuesto("2", "0", 0.0, 0.0));
             impuestosDeTotal.Add(new Impuesto("2", "2", 4359.54, 523.14)); // agregar más impuestos a la lista de ser necesario.
@@ -81,12 +81,12 @@ namespace EjemploCSharp
             var infoAdicionalFactura = new Dictionary<string, string>();
             infoAdicionalFactura.Add("Tiempo de entrega", "5 días");
             notaDeCredito.InformacionAdicional = infoAdicionalFactura;
-      
+
             // Enviar nota de crédito
             var respuesta = notaDeCredito.Enviar(requestOptions);
             Console.WriteLine("RESPUESTA:" + respuesta);
 
-            
+
             // Obtener el id externo, para luego consultar el estado
             JObject json = JObject.Parse(respuesta);
             string idExterno = (string)json["id"];
@@ -106,5 +106,4 @@ namespace EjemploCSharp
         }
     }
 }
-
 

@@ -10,7 +10,7 @@ namespace EjemploCSharp
 {
     class FacturaEjemplo
     {
-        static void Main(string[] args)
+        static void _Main_(string[] args)
         {
             
             string datilApiFacturaUrl = "https://link.datil.co/invoices/";

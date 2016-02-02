@@ -18,21 +18,16 @@ namespace DatilClientLibrary
         /// <summary>Total incluyendo impuestos.</summary>
         public double ImporteTotal { get; set; }
 
-        /// <summary>Suma de los descuentos de cada ítem.</summary>
-        public double Descuento { get; set; }
-
         /// <summary>Listado de impuestos, no necesita incluir tarifa.</summary>
         public List<Impuesto> Impuestos { get; set; }
 
         /// <summary>Construir totales de una factura</summary>
         public TotalesNotaDeCredito(double TotalSinImpuestos,
-            double ImporteTotal,
-            double Descuento)
+            double ImporteTotal)
 
         {
             this.TotalSinImpuestos = TotalSinImpuestos;
             this.ImporteTotal = ImporteTotal;
-            this.Descuento = Descuento;
 
         }
     }
