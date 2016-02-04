@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using DatilClientLibrary;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization.ContractResolverExtentions;
 
 namespace EjemploCSharp
 {
     class FacturaEjemplo
     {
-        static void _Main_(string[] args)
+        static void Main(string[] args)
         {
             
             string datilApiFacturaUrl = "https://link.datil.co/invoices/";
@@ -51,7 +53,17 @@ namespace EjemploCSharp
             impuestosDeTotal.Add(new Impuesto("2","0", 0.0,0.0));
             impuestosDeTotal.Add(new Impuesto("2", "2", 4359.54, 523.14)); // agregar más impuestos a la lista de ser necesario.
             totales.Impuestos = impuestosDeTotal;
-           
+
+            // Retenciones en la factura
+            /*      Caso específico de Retenciones en la Comercializadores / Distribuidores 
+                    de derivados del Petróleo y Retención presuntiva de IVA a los Editores, 
+                    Distribuidores y Voceadores que participan en la comercialización 
+                    de periódicos y/ o revistas.
+            */
+             var retenciones = new List<RetencionFactura>();
+            RetencionFactura retencion = new RetencionFactura("4", "327", 0.20, 0.13);
+            retenciones.Add(retencion);
+
             // Crear factura 
             Factura factura = new Factura();
             // Cabecera
@@ -74,11 +86,13 @@ namespace EjemploCSharp
             factura.Comprador = comprador;            
             factura.Totales = totales;            
             factura.Items = items;
+            factura.Retenciones = retenciones;
+
             // Informaciòn adicional
             var infoAdicionalFactura = new Dictionary<string, string>();
             infoAdicionalFactura.Add("Tiempo de entrega", "5 días");
             factura.InformacionAdicional = infoAdicionalFactura;
- 
+            
             // Enviar factura
             var respuesta = factura.Enviar(requestOptions);
             Console.WriteLine("RESPUESTA:" + respuesta);

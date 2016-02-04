@@ -1,5 +1,10 @@
 ﻿# Librería Link .Net  
 
+
+## 1.1.2-alpha - Febrero 4, 2016
+ 
+ * Soporte para enviar retenciones embebidas la factura
+ 
 ## 1.1.1-alpha - Febrero 2, 2016
  
  * Corrección: Quitar descuento de totales de nota de crédito

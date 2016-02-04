@@ -38,6 +38,16 @@ namespace DatilClientLibrary
         public List<Item> Items { get; set; }
 
         /// <summary>
+        /// Lista de retenciones en la factura.
+        /// Caso específico de Retenciones en la Comercializadores / Distribuidores 
+        /// de derivados del Petróleo y Retención presuntiva de IVA a los Editores,
+        /// Distribuidores y Voceadores que participan en la comercialización de 
+        /// periódicos y/o revistas.
+        /// </summary>
+        /// <see cref="RetencionFactura"/>
+        public List<RetencionFactura> Retenciones { get; set; }
+
+        /// <summary>
         /// Totales de la factura.
         /// </summary>
         /// <see cref="TotalesFactura"/>

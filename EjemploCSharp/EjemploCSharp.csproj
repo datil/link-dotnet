@@ -49,11 +49,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DatilClientLibrary-1.1.0-alpha">
-      <HintPath>..\DatilClientLibrary\bin\Debug\DatilClientLibrary-1.1.0-alpha.dll</HintPath>
+    <Reference Include="DatilClientLibrary-1.1.2-alpha">
+      <HintPath>..\DatilClientLibrary\bin\Release\DatilClientLibrary-1.1.2-alpha.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.ContractResolverExtentions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Json.NET.ContractResolverExtentions.1.0.1\lib\net45\Newtonsoft.Json.ContractResolverExtentions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
