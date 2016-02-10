@@ -17,26 +17,26 @@ namespace DatilClientLibrary
     public class RetencionFactura
     {
         /// <summary>Código del tipo de impuesto para la retención en la factura.</summary>
-        public string TipoImpuesto { get; set; }
+        public string Codigo { get; set; }
 
         /// <summary>Código del porcentaje del impuesto.</summary>
         public string CodigoPorcentaje { get; set; }
 
         /// <summary>Porcentaje actual del impuesto. Máximo 3 enteros y 2 decimales.</summary>
-        public double Tarifa { get; set; }
+        public double Porcentaje { get; set; }
 
         /// <summary>Valor del impuesto. Máximo 12 enteros y 2 decimales.</summary>
         public double Valor { get; set; }
 
         /// <summary>Construir Retención en la factura</summary>
-        public RetencionFactura(string TipoImpuesto,
+        public RetencionFactura(string Codigo,
             string CodigoPorcentaje,
-            double Tarifa,
+            double Porcentaje,
             double Valor)
         {
-            this.TipoImpuesto = TipoImpuesto;
+            this.Codigo = Codigo;
             this.CodigoPorcentaje = CodigoPorcentaje;
-            this.Tarifa = Tarifa;
+            this.Porcentaje = Porcentaje;
             this.Valor = Valor;
         }
     }
