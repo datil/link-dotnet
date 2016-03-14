@@ -1,13 +1,11 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Serialization.ContractResolverExtentions;
 using System;
 using System.Collections.Generic;
 using System.Web.Script.Serialization;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
@@ -121,7 +119,7 @@ namespace DatilClientLibrary
             Console.WriteLine("Enviando factura");
             var jsonSettings = new JsonSerializerSettings
             {
-                ContractResolver = new SnakeCasePropertyNamesContractResolver(),
+                ContractResolver = new SnakeCaseContractResolver(),
                 NullValueHandling = NullValueHandling.Ignore
 
             };

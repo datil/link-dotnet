@@ -1,6 +1,12 @@
 ﻿# Librería Link .Net  
 
 
+
+## 1.1.3-alpha - Marzo 11, 2016
+ 
+ * Implementar covertidor de PascalCase a snake_case para generar JSON
+
+
 ## 1.1.2-alpha - Febrero 4, 2016
  
  * Soporte para enviar retenciones embebidas la factura

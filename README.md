@@ -12,9 +12,6 @@ Requerimientos
 * Newtonsoft.Json 7.0.1
 `Install-Package Newtonsoft.Json -Version 7.0.1`
 
-* Json.NET.ContractResolverExtentions
-`Install-Package Json.NET.ContractResolverExtentions`
-
 * RestSharp
 `Install-Package RestSharp`
 
