@@ -18,6 +18,5 @@ Requerimientos
 Ejemplos de Uso
 =================================
 
-Ver [Ejemplo C Sharp](https://github.com/datil/link-dotnet/blob/master/EjemploCSharp/Program.cs)
-
+Ver [Ejemplo C Sharp](https://github.com/datil/link-dotnet/blob/master/EjemploCSharp/FacturaEjemplo.cs)
 
