@@ -41,6 +41,9 @@ namespace DatilClientLibrary
             }
         }
 
+        /// <summary>Precio sin subsidio</summary>
+        public double? PrecioSinSubsidio { get; set; }
+
         /// <summary>Descripción del ítem</summary>
         public string Descripcion { get; set; }
 

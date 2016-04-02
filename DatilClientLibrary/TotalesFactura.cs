@@ -29,6 +29,9 @@ namespace DatilClientLibrary
         /// <summary>Listado de impuestos, no necesita incluir tarifa.</summary>
         public List<Impuesto> Impuestos { get; set; }
 
+        /// <summary>Valor total de subsidio</summary>
+        public double? TotalSubsidio { get; set; }
+
         /// <summary>Construir totales de una factura</summary>
         public TotalesFactura(double TotalSinImpuestos,
             double ImporteTotal,

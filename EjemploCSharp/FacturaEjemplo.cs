@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using DatilClientLibrary;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization.ContractResolverExtentions;
 
 namespace EjemploCSharp
 {
@@ -39,6 +38,7 @@ namespace EjemploCSharp
             // Detalle de la factura y sus impuestos.
             var items = new List<Item>();
             Item item = new Item("ZNC","050","Zanahoria granel 50 Kg.",622.0, 7.01,4360.22,0.0);
+            item.PrecioSinSubsidio = 600.0;
             var detallesAdicionales = new Dictionary<string, string>();
             detallesAdicionales.Add("Peso", "5000"); //  agregar más detalles al item de ser necesario
             item.DetallesAdicionales = detallesAdicionales;
@@ -49,7 +49,8 @@ namespace EjemploCSharp
 
             // Total de la factura con sus impuestos.          
             var totales = new TotalesFactura(4359.54, 4882.68,0.0, 0.0);
-            var impuestosDeTotal = new List<Impuesto>();
+            totales.TotalSubsidio = 22.00;
+            var impuestosDeTotal = new List<Impuesto>();    
             impuestosDeTotal.Add(new Impuesto("2","0", 0.0,0.0));
             impuestosDeTotal.Add(new Impuesto("2", "2", 4359.54, 523.14)); // agregar más impuestos a la lista de ser necesario.
             totales.Impuestos = impuestosDeTotal;
@@ -63,11 +64,13 @@ namespace EjemploCSharp
              var retenciones = new List<RetencionFactura>();
             RetencionFactura retencion = new RetencionFactura("4", "327", 0.20, 0.13);
             retenciones.Add(retencion);
+            RetencionFactura retencion2 = new RetencionFactura("4", "327", 0.20, 0.13);
+            retenciones.Add(retencion2);
 
             // Crear factura 
             Factura factura = new Factura();
             // Cabecera
-            factura.Secuencial = "610";
+            factura.Secuencial = "1612";
             factura.Moneda = "USD";
 
             DateTime today = DateTime.Today;
