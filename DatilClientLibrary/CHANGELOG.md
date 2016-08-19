@@ -1,6 +1,9 @@
 ﻿# Librería Link .Net  
 
 
+## 1.1.4-alpha - Abril 2, 2016
+ 
+ * Subsidios para combustibles en facturas
 
 ## 1.1.3-alpha - Marzo 11, 2016
  
