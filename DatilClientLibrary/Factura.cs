@@ -81,6 +81,21 @@ namespace DatilClientLibrary
         ///<summary>La clave de acceso representa un identificador único del comprobante.Si esta información no es provista, Dátil la generará.</summary>
         public string ClaveAcceso { get; set; }
 
+        /// <summary>Valor retenido del IVA </summary>
+        public double? ValorRetenidoIva { get; set; }
+
+        /// <summary>Valor retenido de la renta </summary>
+        public double? ValorRetenidoRenta { get; set; }
+
+        /// <summary>Credito en el pago de la factura </summary>
+        public CreditoFactura Credito { get; set; }
+
+        /// <summary>
+        /// Métodos de Pago
+        /// </summary>
+        /// <see cref="MetodoPago"/>
+        public List<MetodoPago> Pagos { get; set; }
+
         /// <summary>
         /// Construir una nueva Factura.
         /// </summary>
@@ -92,6 +107,10 @@ namespace DatilClientLibrary
             Ambiente = 1;
             Moneda = "USD";
             ClaveAcceso = null; 
+            ValorRetenidoIva = null;
+            ValorRetenidoRenta = null;
+            Credito = null;
+            Pagos = new List<MetodoPago>();
 
         }
         
@@ -108,6 +127,21 @@ namespace DatilClientLibrary
            
         }
         
+       /// <summary>
+       /// Convert object Factura to a json representation
+       /// </summary>
+       /// <returns>The json representation</returns>
+        public string toJson() {
+            var jsonSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new SnakeCaseContractResolver(),
+                NullValueHandling = NullValueHandling.Ignore
+
+            };
+            var json = JsonConvert.SerializeObject(this, jsonSettings);
+            return json;
+        }
+
         
         /// <summary>
         /// Enviar información de la factura para generarla electrónicamente.
@@ -117,15 +151,9 @@ namespace DatilClientLibrary
         public String Enviar(RequestOptions requestOptions)
         {
             Console.WriteLine("Enviando factura");
-            var jsonSettings = new JsonSerializerSettings
-            {
-                ContractResolver = new SnakeCaseContractResolver(),
-                NullValueHandling = NullValueHandling.Ignore
 
-            };
-            var json = JsonConvert.SerializeObject(this, jsonSettings);
             var apiRequest = new ApiRequest(requestOptions);
-            return apiRequest.Post(json);
+            return apiRequest.Post(this.toJson());
         }
 
         

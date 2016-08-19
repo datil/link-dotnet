@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DatilClientLibrary;
+using System.Globalization;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
@@ -26,16 +27,16 @@ namespace EjemploCSharp
             requestOptions.Password = myPassword;
             requestOptions.Url = datilApiFacturaUrl + "issue";
         
-            // Información del comprador 
+            // Información del comprador (Obligatorio)
             Comprador comprador = new Comprador("Juan Pérez", "0989898921001", "04", "juan.perez@xyz.com", "Calle única Numero 987", "046029400");
            
-            // Información del establecimiento 
+            // Información del establecimiento (Obligatorio)
             Establecimiento establecimiento = new Establecimiento("001", "002", "Av. Primera 234 y calle 5ta");
 
-            // Información del emisor. Necesita de un Establecimiento.
+            // Información del emisor. Necesita de un Establecimiento. (Obligatorio)
             Emisor emisor = new Emisor("0910000000001", "GUGA S.A. ", "XYZ Corp", "Av.Primera 234 y calle 5ta",  "12345", true, establecimiento);
 
-            // Detalle de la factura y sus impuestos.
+            // Detalle de la factura y sus impuestos. (Obligatorio)
             var items = new List<Item>();
             Item item = new Item("ZNC","050","Zanahoria granel 50 Kg.",622.0, 7.01,4360.22,0.0);
             item.PrecioSinSubsidio = 600.0;
@@ -47,7 +48,7 @@ namespace EjemploCSharp
             item.Impuestos = impuestos;
             items.Add(item); //agregar más items a la lista de ser necesario
 
-            // Total de la factura con sus impuestos.          
+            // Total de la factura con sus impuestos. (Obligatorio)       
             var totales = new TotalesFactura(4359.54, 4882.68,0.0, 0.0);
             totales.TotalSubsidio = 22.00;
             var impuestosDeTotal = new List<Impuesto>();    
@@ -67,39 +68,60 @@ namespace EjemploCSharp
             RetencionFactura retencion2 = new RetencionFactura("4", "327", 0.20, 0.13);
             retenciones.Add(retencion2);
 
-            // Crear factura 
+            // Creación del objeto factura
             Factura factura = new Factura();
-            // Cabecera
-            factura.Secuencial = "1612";
+
+            // Cabecera de la factura
+            factura.Secuencial = "1613";
             factura.Moneda = "USD";
+            factura.Ambiente = 1;
+            factura.TipoEmision = 1;
 
             DateTime today = DateTime.Today;
             var offset = TimeZoneInfo.Local.GetUtcOffset(today);
             factura.FechaEmision = new DateTimeOffset(today, offset);
-         
-            //factura.FechaEmision = DateTime.Today;
-            Console.WriteLine(factura.FechaEmision);
-            factura.Ambiente = 1;
-            factura.TipoEmision = 1;
             //factura.Version =
             //factura.ClaveAcceso = 
             //factura.GuiaRemision =
-            // Informaciòn de la factura
+
+            // Completar informaciòn de la factura
             factura.Emisor = emisor;            
             factura.Comprador = comprador;            
             factura.Totales = totales;            
             factura.Items = items;
             factura.Retenciones = retenciones;
 
-            // Informaciòn adicional
+            // Valores de retención de IVA y de Renta (Opcionales)
+            factura.ValorRetenidoIva = 2.0;
+            factura.ValorRetenidoRenta = 0.10;
+
+            //Métodos de pago  (Obligatorio)
+                // Ejemplo de pagos sin propiedades adicionales
+            factura.Pagos.Add(new MetodoPago("efectivo",  12.0));
+            factura.Pagos.Add(new MetodoPago("transferencia_otro_banco", 8.0));
+                // Ejemplo de pago con propiedades adicionales
+            var pagoConDetalle = new MetodoPago("tarjeta_credito_nacional", 60.0);
+            pagoConDetalle.Propiedades = new Dictionary<string, string>();
+            pagoConDetalle.Propiedades.Add("Tipo tarjeta", "Visa");
+            pagoConDetalle.Propiedades.Add("Diferido", "3 meses");
+            factura.Pagos.Add(pagoConDetalle);
+
+            // Credito otorgado al cliente (Opcional)
+            var montoCredito = 10.50;
+                // Crédito a 30 días a partir de la fecha de emisión. Formato 'yyyy-mm-dd'
+            var fechaVencimientoCredito = factura.FechaEmision.Date.AddDays(30).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            factura.Credito = new CreditoFactura(montoCredito, fechaVencimientoCredito);
+            
+            // Informaciòn adicional de la factura (Opcional)
             var infoAdicionalFactura = new Dictionary<string, string>();
             infoAdicionalFactura.Add("Tiempo de entrega", "5 días");
             factura.InformacionAdicional = infoAdicionalFactura;
+
+            Console.WriteLine(factura.toJson());
             
             // Enviar factura
             var respuesta = factura.Enviar(requestOptions);
             Console.WriteLine("RESPUESTA:" + respuesta);
-
             
             // Obtener el id externo, para luego consultar el estado
             JObject json = JObject.Parse(respuesta);
@@ -115,6 +137,7 @@ namespace EjemploCSharp
             json = JObject.Parse(respuesta);
             string estado = (string)json["estado"];
             Console.WriteLine("ESTADO: " + estado); // RECIBIDO
+            
             
         }
     }
