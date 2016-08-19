@@ -1,9 +1,14 @@
 ﻿# Librería Link .Net  
 
+## 1.2.0-alpha - Agosto 19, 2016
+
+ * Agregar pagos, crédito y valores retenidos en la factura
+ 
 
 ## 1.1.4-alpha - Abril 2, 2016
  
  * Subsidios para combustibles en facturas
+
 
 ## 1.1.3-alpha - Marzo 11, 2016
  
@@ -13,6 +18,7 @@
 ## 1.1.2-alpha - Febrero 4, 2016
  
  * Soporte para enviar retenciones embebidas la factura
+
  
 ## 1.1.1-alpha - Febrero 2, 2016
  
