@@ -1,5 +1,11 @@
 ﻿# Librería Link .Net  
 
+
+## 1.2.1-alpha - Agosto 23, 2016
+
+ * Enviar cabecera con información del canal de emisión
+
+
 ## 1.2.0-alpha - Agosto 19, 2016
 
  * Agregar pagos, crédito y valores retenidos en la factura
