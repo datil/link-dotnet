@@ -25,6 +25,7 @@ namespace DatilClientLibrary
             request.AddHeader("Content-Type", "application/json");
             request.AddHeader("X-Key", requestOptions.ApiKey);
             request.AddHeader("X-Password", requestOptions.Password);
+            request.AddHeader("X-Dat-Channel", "link-dotnet");
             request.RequestFormat = DataFormat.Json;
         }
 
