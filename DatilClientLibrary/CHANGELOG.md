@@ -1,6 +1,11 @@
 ﻿# Librería Link .Net  
 
 
+## 1.2.2-alpha - Agosto 25, 2016
+
+ * Renombrar atributos de valores retenidos de la factura
+
+
 ## 1.2.1-alpha - Agosto 23, 2016
 
  * Enviar cabecera con información del canal de emisión
