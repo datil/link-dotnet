@@ -92,8 +92,8 @@ namespace EjemploCSharp
             factura.Retenciones = retenciones;
 
             // Valores de retención de IVA y de Renta (Opcionales)
-            factura.ValorRetenidoIva = 2.0;
-            factura.ValorRetenidoRenta = 0.10;
+            factura.ValorRetIva = 2.0;
+            factura.ValorRetRenta = 0.10;
 
             //Métodos de pago  (Obligatorio)
                 // Ejemplo de pagos sin propiedades adicionales

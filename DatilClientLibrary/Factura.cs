@@ -82,10 +82,10 @@ namespace DatilClientLibrary
         public string ClaveAcceso { get; set; }
 
         /// <summary>Valor retenido del IVA </summary>
-        public double? ValorRetenidoIva { get; set; }
+        public double? ValorRetIva { get; set; }
 
         /// <summary>Valor retenido de la renta </summary>
-        public double? ValorRetenidoRenta { get; set; }
+        public double? ValorRetRenta { get; set; }
 
         /// <summary>Credito en el pago de la factura </summary>
         public CreditoFactura Credito { get; set; }
@@ -107,8 +107,8 @@ namespace DatilClientLibrary
             Ambiente = 1;
             Moneda = "USD";
             ClaveAcceso = null; 
-            ValorRetenidoIva = null;
-            ValorRetenidoRenta = null;
+            ValorRetIva = null;
+            ValorRetRenta = null;
             Credito = null;
             Pagos = new List<MetodoPago>();
 
