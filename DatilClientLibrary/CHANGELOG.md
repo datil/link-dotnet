@@ -1,6 +1,11 @@
 ﻿# Librería Link .Net  
 
 
+## 1.3.0-alpha - Septiembre 20, 2016
+
+ * Emisión de retenciones
+
+
 ## 1.2.2-alpha - Agosto 25, 2016
 
  * Renombrar atributos de valores retenidos de la factura
