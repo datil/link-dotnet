@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
+
+    /// <summary>
+    /// Clase de la retención
+    /// </summary>
     public class Retencion
     {
         /// <summary>Número de secuencia de la retención.</summary>
