@@ -6,17 +6,17 @@ using System.Text;
 namespace DatilClientLibrary
 {
     /// <summary>
-    /// Clase de los totales de una nota de crédito.
+    /// Clase de los totales de una nota de débito.
     /// </summary>
-    ///<see cref="NotaDeCredito"/>
-    public class TotalesNotaDeCredito : TotalesDeNota
+    ///<see cref="NotaDeDebito"/>
+    public class TotalesNotaDeDebito : TotalesDeNota
     {
 
         /// <summary>Construir totales de una nota de crédito</summary>
-        public TotalesNotaDeCredito(double TotalSinImpuestos,
+        public TotalesNotaDeDebito(double TotalSinImpuestos,
             double ImporteTotal) : base(TotalSinImpuestos, ImporteTotal)
         {
-                
+
         }
 
     }

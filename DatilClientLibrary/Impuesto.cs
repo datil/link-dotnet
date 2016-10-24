@@ -23,7 +23,8 @@ namespace DatilClientLibrary
         /// <summary>Valor del total</summary>
         public double Valor { get; set; }
 
-
+        /// <summary> Porcentaje actual del impuesto expresado por un número entre 0.0 y 100.0</summary>
+        public double? Tarifa { get; set; }
 
         /// <summary> Construir un impuesto con tarifa</summary>
         public Impuesto(string Codigo,
