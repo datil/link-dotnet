@@ -1,4 +1,9 @@
-﻿# Librería Link .Net  
+﻿# Librería Dátil Link .Net 
+
+
+## 1.5.0-alpha - Octubre 24, 2016
+
+ * Emisión de notas de débito
 
 
 ## 1.4.0-alpha - Octubre 10, 2016
