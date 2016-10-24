@@ -1,6 +1,11 @@
 ﻿# Librería Link .Net  
 
 
+## 1.4.0-alpha - Octubre 10, 2016
+
+ * Emisión de guías de remisión
+
+
 ## 1.3.0-alpha - Septiembre 20, 2016
 
  * Emisión de retenciones
