@@ -1,22 +1,17 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
-using System.Web.Script.Serialization;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
-
-
     /// <summary>
-    /// Clase de la factura
+    /// Clase de la Liquidación de compra
     /// </summary>
-    public class Factura
+    public class LiquidacionCompra
     {
-
         /// <summary>
         /// Emisor (persona natural o jurídica) del producto o servicio que consta en la factura.
         /// </summary>
@@ -26,8 +21,8 @@ namespace DatilClientLibrary
         /// <summary>
         /// Comprador del producto o servicio que consta en la factura.
         /// </summary>
-        /// <see cref="Comprador"/>
-        public Comprador Comprador { get; set; }
+        /// <see cref="Proveedor"/>
+        public Proveedor Proveedor { get; set; }
 
         /// <summary>
         /// Lista de items detallados en la factura.
@@ -36,30 +31,16 @@ namespace DatilClientLibrary
         public List<Item> Items { get; set; }
 
         /// <summary>
-        /// Lista de retenciones en la factura.
-        /// Caso específico de Retenciones en la Comercializadores / Distribuidores 
-        /// de derivados del Petróleo y Retención presuntiva de IVA a los Editores,
-        /// Distribuidores y Voceadores que participan en la comercialización de 
-        /// periódicos y/o revistas.
-        /// </summary>
-        /// <see cref="RetencionFactura"/>
-        public List<RetencionFactura> Retenciones { get; set; }
-
-        /// <summary>
         /// Totales de la factura.
         /// </summary>
-        /// <see cref="TotalesFactura"/>
-        public TotalesFactura Totales { get; set; }
+        /// <see cref="TotalesLiquidacion"/>
+        public TotalesLiquidacion Totales { get; set; }
+
 
         /// <summary>
         /// Información adicional de la factura.
         /// </summary>
-        public Dictionary<string,string> InformacionAdicional { get; set; }
-        /// <summary>
-        /// Información adicional de la factura, pero ayuda amantener el orden
-        /// con el cual se envía.
-        /// </summary>
-        public List<InfoAdicional> infoAdicional { get; set; }
+        public Dictionary<string, string> InformacionAdicional { get; set; }
 
         /// <summary>Número de secuencia de la factura.</summary>
         public string Secuencial { get; set; }
@@ -86,39 +67,34 @@ namespace DatilClientLibrary
         ///<summary>La clave de acceso representa un identificador único del comprobante.Si esta información no es provista, Dátil la generará.</summary>
         public string ClaveAcceso { get; set; }
 
-        /// <summary>Valor retenido del IVA </summary>
-        public double? ValorRetIva { get; set; }
-
-        /// <summary>Valor retenido de la renta </summary>
-        public double? ValorRetRenta { get; set; }
-
-        /// <summary>Credito en el pago de la factura </summary>
-        public CreditoFactura Credito { get; set; }
-
         /// <summary>
         /// Métodos de Pago
         /// </summary>
-        /// <see cref="MetodoPago"/>
-        public List<MetodoPago> Pagos { get; set; }
+        /// <see cref="FormaPagoLiquidacionC"/>
+        public List<FormaPagoLiquidacionC> Pagos { get; set; }
+
+        /// <summary>
+        /// Información de máquina fiscal.
+        /// </summary>
+        /// <see cref="MaquinaFiscalLiquidacionC"/>
+        public MaquinaFiscalLiquidacionC MaquinaFiscal { get; set; }
+
 
         /// <summary>
         /// Construir una nueva Factura.
         /// </summary>
-        public Factura()
+        public LiquidacionCompra()
         {
             GuiaRemision = null;
             Version = "1.0.0";
             TipoEmision = 1;
             Ambiente = 1;
             Moneda = "USD";
-            ClaveAcceso = null; 
-            ValorRetIva = null;
-            ValorRetRenta = null;
-            Credito = null;
-            Pagos = new List<MetodoPago>();
+            ClaveAcceso = null;
+            Pagos = new List<FormaPagoLiquidacionC>();
 
         }
-        
+
         /// <summary>
         /// Consultar información de la factura previamente enviada.
         /// </summary>
@@ -126,17 +102,18 @@ namespace DatilClientLibrary
         /// <returns>Información de la factura enviada</returns>
         public static string Consultar(RequestOptions requestOptions)
         {
-            Console.WriteLine("Consultando Factura");
+            Console.WriteLine("Consultando Liquidación");
             var apiRequest = new ApiRequest(requestOptions);
             return apiRequest.Get();
-           
+
         }
-        
-       /// <summary>
-       /// Convert object Factura to a json representation
-       /// </summary>
-       /// <returns>The json representation</returns>
-        public string toJson() {
+
+        /// <summary>
+        /// Convert object Factura to a json representation
+        /// </summary>
+        /// <returns>The json representation</returns>
+        public string toJson()
+        {
             var jsonSettings = new JsonSerializerSettings
             {
                 ContractResolver = new SnakeCaseContractResolver(),
@@ -147,7 +124,7 @@ namespace DatilClientLibrary
             return json;
         }
 
-        
+
         /// <summary>
         /// Enviar información de la factura para generarla electrónicamente.
         /// </summary>
@@ -155,13 +132,11 @@ namespace DatilClientLibrary
         /// <returns>Información de la factura enviada</returns>
         public String Enviar(RequestOptions requestOptions)
         {
-            Console.WriteLine("Enviando factura");
+            Console.WriteLine("Enviando Liquidación");
 
             var apiRequest = new ApiRequest(requestOptions);
             return apiRequest.Post(this.toJson());
         }
-
-        
-
     }
+
 }
