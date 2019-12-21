@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
-    public class FormaPagoLiquidacionC
+    public class FormaPagoLiquidacionCompra
     {
         /// <summary>
         /// Medio de pago según la documentación del API de Dátil 
@@ -59,7 +59,7 @@ namespace DatilClientLibrary
         public Dictionary<string, string> Propiedades { get; set; }
 
         /// <summary>Constructor del objeto MetodoPago</summary>
-        public FormaPagoLiquidacionC(string FormaDePago, double Total)
+        public FormaPagoLiquidacionCompra(string FormaDePago, double Total)
         {
             this.Propiedades = null;
             this.FormaPago = FormaDePago;

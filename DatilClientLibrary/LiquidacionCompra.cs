@@ -70,14 +70,14 @@ namespace DatilClientLibrary
         /// <summary>
         /// Métodos de Pago
         /// </summary>
-        /// <see cref="FormaPagoLiquidacionC"/>
-        public List<FormaPagoLiquidacionC> Pagos { get; set; }
+        /// <see cref="FormaPagoLiquidacionCompra"/>
+        public List<FormaPagoLiquidacionCompra> Pagos { get; set; }
 
         /// <summary>
         /// Información de máquina fiscal.
         /// </summary>
-        /// <see cref="MaquinaFiscalLiquidacionC"/>
-        public MaquinaFiscalLiquidacionC MaquinaFiscal { get; set; }
+        /// <see cref="MaquinaFiscalLiquidacionCompra"/>
+        public MaquinaFiscalLiquidacionCompra MaquinaFiscal { get; set; }
 
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DatilClientLibrary
             Ambiente = 1;
             Moneda = "USD";
             ClaveAcceso = null;
-            Pagos = new List<FormaPagoLiquidacionC>();
+            Pagos = new List<FormaPagoLiquidacionCompra>();
 
         }
 

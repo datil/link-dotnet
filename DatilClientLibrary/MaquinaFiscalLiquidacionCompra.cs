@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatilClientLibrary
 {
-    public class MaquinaFiscalLiquidacionC
+    public class MaquinaFiscalLiquidacionCompra
     {
         public string marca { get; set; }
         public string modelo { get; set; }
