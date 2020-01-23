@@ -65,13 +65,17 @@
     <Compile Include="Destinatario.cs" />
     <Compile Include="Establecimiento.cs" />
     <Compile Include="Factura.cs" />
+    <Compile Include="FormaPagoLiquidacionCompra.cs" />
     <Compile Include="GuiaDeRemision.cs" />
     <Compile Include="Impuesto.cs" />
     <Compile Include="ImpuestoItem.cs" />
+    <Compile Include="InfoAdicional.cs" />
     <Compile Include="ItemDestinatario.cs" />
     <Compile Include="ItemNotaDeDebito.cs" />
     <Compile Include="ItemRetencion.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="LiquidacionCompra.cs" />
+    <Compile Include="MaquinaFiscalLiquidacionCompra.cs" />
     <Compile Include="MetodoPago.cs" />
     <Compile Include="NotaDeDebito.cs" />
     <Compile Include="NoValidAttributeException.cs" />
@@ -81,6 +85,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Proveedor.cs" />
     <Compile Include="RequestOptions.cs" />
     <Compile Include="Emisor.cs" />
     <Compile Include="NotaDeCredito.cs" />
@@ -89,6 +94,7 @@
     <Compile Include="SnakeCaseContractResolver.cs" />
     <Compile Include="TotalesDeNota.cs" />
     <Compile Include="TotalesFactura.cs" />
+    <Compile Include="TotalesLiquidacion.cs" />
     <Compile Include="TotalesNotaDeCredito.cs" />
     <Compile Include="TotalesNotaDeDebito.cs" />
     <Compile Include="Transportista.cs" />
