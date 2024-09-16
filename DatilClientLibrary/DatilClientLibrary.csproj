@@ -8,10 +8,11 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DatilClientLibrary</RootNamespace>
-    <AssemblyName>DatilClientLibrary-1.5.0-alpha</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AssemblyName>DatilClientLibrary-1.6.0-alpha</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,14 +40,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.105.2.3\lib\net35\RestSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -63,6 +56,7 @@
     <Compile Include="Comprador.cs" />
     <Compile Include="CreditoFactura.cs" />
     <Compile Include="Destinatario.cs" />
+    <Compile Include="DocumentoSoporte.cs" />
     <Compile Include="Establecimiento.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="FormaPagoLiquidacionCompra.cs" />
@@ -70,6 +64,7 @@
     <Compile Include="Impuesto.cs" />
     <Compile Include="ImpuestoItem.cs" />
     <Compile Include="InfoAdicional.cs" />
+    <Compile Include="InformacionAdicional.cs" />
     <Compile Include="ItemDestinatario.cs" />
     <Compile Include="ItemNotaDeDebito.cs" />
     <Compile Include="ItemRetencion.cs" />
@@ -86,11 +81,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Proveedor.cs" />
+    <Compile Include="Reembolso.cs" />
     <Compile Include="RequestOptions.cs" />
     <Compile Include="Emisor.cs" />
     <Compile Include="NotaDeCredito.cs" />
     <Compile Include="RetencionFactura.cs" />
     <Compile Include="Retencion.cs" />
+    <Compile Include="RetencionATS.cs" />
     <Compile Include="SnakeCaseContractResolver.cs" />
     <Compile Include="TotalesDeNota.cs" />
     <Compile Include="TotalesFactura.cs" />
@@ -103,11 +100,14 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="CHANGELOG.md" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="105.2.3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,11 @@
 ﻿# Librería Dátil Link .Net 
 
 
+## 1.6.0-alpha - Octubre 1, 2024
+
+ * Emisión de retenciones ATS
+
+
 ## 1.5.0-alpha - Octubre 24, 2016
 
  * Emisión de notas de débito
