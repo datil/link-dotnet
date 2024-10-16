@@ -10,7 +10,7 @@ namespace EjemploCSharp
 {
     class NotaDeDebitoEjemplo
     {
-        static void Main(string[] args)
+        static void Main_(string[] args)
         {
 
             string datilApiNotaDebitoUrl = "https://link.datil.co/debit-notes/";

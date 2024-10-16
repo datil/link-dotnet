@@ -2,11 +2,6 @@
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
-using System.Web.Script.Serialization;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-
 
 namespace DatilClientLibrary
 {
@@ -101,7 +96,6 @@ namespace DatilClientLibrary
             Console.WriteLine("Consultando nota de débito");
             var apiRequest = new ApiRequest(requestOptions);
             return apiRequest.Get();
-
         }
 
 
@@ -110,14 +104,13 @@ namespace DatilClientLibrary
         /// </summary>
         /// <param name="requestOptions"></param>
         /// <returns>Información de la nota de débito enviada</returns>
-        public String Enviar(RequestOptions requestOptions)
+        public string Enviar(RequestOptions requestOptions)
         {
             Console.WriteLine("Enviando nota de débito");
             var jsonSettings = new JsonSerializerSettings
             {
                 ContractResolver = new SnakeCaseContractResolver(),
                 NullValueHandling = NullValueHandling.Ignore
-
             };
             var json = JsonConvert.SerializeObject(this, jsonSettings);
             var apiRequest = new ApiRequest(requestOptions);
